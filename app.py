@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Hugging Face API info (set as Render environment variable)
 HF_API_KEY = os.environ.get("HF_API_KEY")
-HF_MODEL_URL = "https://api-inference.huggingface.co/models/sarveshhh111/your-chatbot"
+HF_MODEL_URL = "https://api-inference.huggingface.co/models/sarveshhh111/farmerai1"
 
 headers = {"Authorization": f"Bearer {HF_API_KEY}"}
 
@@ -41,3 +41,6 @@ def sms_reply():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+@app.route("/")
+def home():
+    return "Farmer AI bot is running!"
