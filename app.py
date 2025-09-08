@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Hugging Face API info (set as Render environment variable)
 HF_API_KEY = os.environ.get("HF_API_KEY")
-HF_MODEL_URL = "https://api-inference.huggingface.co/models/sarveshhh111/farmerai1"
+HF_MODEL_URL = "https://api-inference.huggingface.co/models/sarveshhh111/farmerai"
 
 headers = {"Authorization": f"Bearer {HF_API_KEY}"}
 
